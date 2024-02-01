@@ -74,7 +74,7 @@ An Exception is thrown
 """
 person = Person()
 with pytest.raises(Exception) as e:
-    person.add_items_to_backpack("")
+    person.add_item_to_backpack("")
 
 actual = str(e.value)
 expected = "Please provide an item to put in the backpack!"
