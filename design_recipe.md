@@ -22,7 +22,7 @@ class Person():
         self.backpack = []
 
 
-    def add_items_to_backpack(self, item):
+    def add_item_to_backpack(self, item):
         """It takes a string, and stores it in the backpack.
 
         Parameters: (list all parameters and their types)
