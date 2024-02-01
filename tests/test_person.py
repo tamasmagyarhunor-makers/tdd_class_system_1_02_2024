@@ -1,4 +1,5 @@
 from lib.person import *
+import pytest
 
 def test_person_instantiates_with_backpack():
     person = Person()
@@ -24,5 +25,15 @@ def test_person_puts_book_and_phone_in_backpack():
 
     actual = person.backpack
     expected = ["book", "phone"]
+
+    assert actual == expected
+
+def test_person_puts_empty_string_into_backpack():
+    person = Person()
+    with pytest.raises(Exception) as e:
+        person.add_item_to_backpack("")
+
+    actual = str(e.value)
+    expected = "Please provide an item to put in the backpack!"
 
     assert actual == expected
