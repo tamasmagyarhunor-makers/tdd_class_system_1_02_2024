@@ -37,3 +37,13 @@ def test_person_puts_empty_string_into_backpack():
     expected = "Please provide an item to put in the backpack!"
 
     assert actual == expected
+
+def test_person_puts_empty_string_into_backpack_2():
+    person = Person()
+    person.add_item_to_backpack("")
+
+    actual = person.backpack
+    expected = [""]
+
+    assert actual == expected
+
